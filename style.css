@@ -1,0 +1,196 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #212428;
+    font-family: "Oswald", sans-serif;
+}
+input:focus {
+    border: none;
+}
+.conteiner {
+    width: 70%;
+
+    margin: 0 auto;
+    height: 80vh;
+}
+.list {
+    width: 80%;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    border-radius: 1%;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    margin: 0px auto;
+    padding: 20px;
+    min-height: 70vh;
+    height: auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+h1 {
+    font-size: 60px;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.add-todo-wraper {
+    display: flex;
+    width: 90%;
+    min-height: 40px;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.input-wrapper {
+    width: 80%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 30px;
+}
+
+.button-wrapper {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-wrapper button {
+    cursor: pointer;
+    height: 100%;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.4s;
+    z-index: 2;
+    color: rgb(48, 48, 182);
+    display: inline-block;
+    list-style: none;
+    padding: 15px 35px;
+    text-decoration: none;
+    width: auto;
+    line-height: normal;
+}
+
+.button-wrapper button::before {
+    background: linear-gradient(to right bottom, #212428, #16181c);
+    border-radius: 6px;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    width: 100%;
+    z-index: -1;
+}
+.button-wrapper button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right bottom, #212428, #16181c);
+}
+
+.todos-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.todo-item {
+    display: flex;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    text-align: left;
+}
+
+.todo-item.checked {
+    background: #191b1e;
+    opacity: 0.5;
+    text-decoration: line-through;
+    box-shadow: 1px 4px 2px -3px rgb(0 0 0 / 70%) inset, -1px -3px 3px -2px hsl(0deg 0% 100% / 20%) inset;
+}
+
+.todo-item.delition {
+    animation: opacity 1s ease-in-out;
+}
+
+.description {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    color: #c4cfde;
+}
+
+#description-task {
+    width: 80%;
+    height: 55px;
+
+    background-color: #191b1e;
+    border: 2px solid #191b1e;
+    border-radius: 6px;
+    box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px hsla(0, 0%, 100%, 0.2) inset;
+    color: #c4cfde;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    transition: 0.4s;
+}
+
+#description-task:focus {
+    background-color: #191b1e;
+    border-color: rgb(48, 48, 182);
+    box-shadow: none;
+    color: #e4e6ea;
+}
+
+.buttons {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button input {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.delete {
+    opacity: 0.3;
+    margin-left: 10px;
+    width: 13px;
+    height: 13px;
+}
+.delete:hover {
+    opacity: 1;
+}
